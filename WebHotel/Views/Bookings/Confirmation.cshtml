@@ -1,0 +1,48 @@
+﻿@model WebHotel.Models.Booking
+
+@{ 
+    ViewData["Title"] = "Comnfirmation";
+}
+
+<h3>Confirmed</h3>
+
+<div>
+    <p>Success!</p>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TheRoom.ID)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.TheRoom.ID)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TheRoom.Level)
+        </dt>
+        <dd>
+            @Html.DisplayFor(modelItem => modelItem.TheRoom.Level)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckIn)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CheckIn)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CheckOut)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CheckOut)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Cost)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Cost)
+        </dd>
+    </dl>
+
+    <p>
+        <a asp-action="Index">Back to your bookings</a>
+    </p>
+</div>
